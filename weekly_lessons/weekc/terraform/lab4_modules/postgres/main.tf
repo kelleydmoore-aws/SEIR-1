@@ -49,4 +49,10 @@ resource "google_sql_user" "user" {
   password = var.db_password
 }
 
+resource "google_sql_user" "han" {
+  name     = var.han_user
+  instance = google_sql_database_instance.postgres.name
+  password = var.han_password
+}
+
 
